@@ -1,0 +1,42 @@
+body {
+            height: 150vh; 
+            margin: 20px;
+            font-family: Arial, sans-serif;
+            font-weight: bold;
+        }
+.box 
+{
+    width: 150PX;
+    height:150PX;
+    padding: 15px;
+    border: 2px solid #333;
+}
+
+.box1 {
+    position: static;
+    background-color: lightblue;
+}
+
+.box2 {
+    position: relative;
+    top: -40px; 
+    left: 40px;  
+    background-color: lightgreen;
+    /* z-index: 10;  */
+}
+
+.box3 {
+    position: absolute;
+    bottom: 50px;
+    right: 50px;
+    background-color: lightcoral;
+    z-index: 1; 
+}
+
+.box4 {
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+    background-color: gold;
+    z-index: 5; 
+}

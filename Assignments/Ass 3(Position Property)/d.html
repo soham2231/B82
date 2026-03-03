@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment 4</title>
+    <style>
+        /* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background-color: #f5f7fa;
+}
+
+/* Hero Section */
+.hero {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Left Side */
+.left {
+    width: 50%;
+}
+
+.blue-text {
+    color: #1e73be;
+    font-family: papyrus, fantasy;
+}
+
+.left h1 {
+    font-size: 48px;
+    margin: 10px 0;
+}
+
+.left p {
+    color: #555;
+    margin: 20px 0;
+    line-height: 1.6;
+}
+
+.buttons {
+    margin-top: 20px;
+}
+
+button {
+    padding: 12px 20px;
+    border: none;
+    cursor: pointer;
+    border-radius: 25px;
+    margin-right: 10px;
+}
+
+.explore-btn {
+    background-color: #1e73be;
+    color: white;
+}
+
+.demo-btn {
+    background-color: white;
+    border: 1px solid #1e73be;
+    color: #1e73be;
+}
+
+/* Right Side */
+.right img {
+    width: 900px;
+    height: 550px;
+}
+
+/* Stats Section */
+.stats {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+}
+
+.box {
+    background-color: #1e73be;
+    color: white;
+    padding: 20px 40px;
+    border-radius: 8px;
+    text-align: center;
+}
+    </style>
+</head>
+<body>
+    <section class="hero">
+
+        <div class="left">
+           
+            
+            <h1>
+                <span class="blue-text">Discover</span><br>
+                The World
+            </h1>
+
+            <p>
+                Let’s embark on a global journey, immersing ourselves in 
+                diverse cultures and creating unforgettable memories 
+                as we travel the world.
+            </p>
+
+            <div class="buttons">
+                <button class="explore-btn">Explore More</button>
+                <button class="demo-btn">Watch Demo</button>
+            </div>
+        </div>
+
+        <div class="right">
+            <img src="tr.png" alt="Traveler Image">
+        </div>
+
+    </section>
+
+    <section class="stats">
+        <div class="box">
+            <h2>64+</h2>
+            <p>Countries</p>
+        </div>
+
+        <div class="box">
+            <h2>24M+</h2>
+            <p>Per Year User</p>
+        </div>
+
+        <div class="box">
+            <h2>03K+</h2>
+            <p>Experiences</p>
+        </div>
+    </section>
+</body>
+</html>

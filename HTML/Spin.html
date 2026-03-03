@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spinner</title>
+
+    <style>
+     .loader {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+}
+
+.spinner {
+  width: 50px;
+  height: 50px;
+  /* border: 5px solid #f3f3f3;  */
+  border: 5px dotted #f3f3f3; 
+  border-top: 5px dotted #3498db; 
+  border-radius: 50%;
+  animation: spin 1s linear infinite; 
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.ball1, .ball2 {
+  /* display: flex; */
+  background-color: red;
+}
+    
+
+body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f0f0f0;
+        }
+
+        .ball {
+            width: 100px;
+            height: 100px;
+            background: #00bfff;
+            border-radius: 50%;
+            position: relative; /* Required for the 'top' property in keyframes */
+            animation: bounce 2s infinite ease-in-out; /* Apply the animation */
+        }
+
+        @keyframes bounce {
+            0%, 100% {
+                top: 0;
+                /* ease-in at the start (top) makes it drop fast */
+                animation-timing-function: ease-in; 
+            }
+            50% {
+                top: 200px; /* Adjust this value for higher/lower bounce */
+                /* ease-out at the bottom makes it rise slowly */
+                animation-timing-function: ease-out; 
+            }
+        }
+
+        div{
+          display: flex;
+          justify-content: space-between;
+        }
+    </style>
+
+
+</head>
+<body>
+    <div class="loader">
+  <div class="spinner"></div>
+
+       <div class="ball"></div>
+
+</div>
+</div>
+</body>
+</html>

@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment I</title>
+    <style>
+        body{
+
+            height: 600vh;
+        }
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            height: 100px;
+            width: 100px;
+            gap: 10px;
+            margin-bottom: 70px;
+        }
+        .item {
+            background-color: lightblue;
+            padding: 20px;
+            text-align: center;
+        }
+        h2 {
+            margin-top: 20px;
+        }
+        
+        .blog-container {
+  display: grid;
+  /* This creates two columns: the sidebar gets 1 fraction, main gets 3 */
+  grid-template-columns: 1fr 3fr; 
+  gap: 10px;
+  /* Here we name exactly where we want our pieces to go */
+  grid-template-areas:
+    "header header"
+    "sidebar main"
+    "footer footer";
+}
+
+/* Assigning the HTML elements to the grid areas defined above */
+.blog-header { grid-area: header; background: #f4a261; padding: 20px; }
+.blog-sidebar { grid-area: sidebar; background: #e76f51; padding: 20px; }
+.blog-main { grid-area: main; background: #2a9d8f; padding: 50px 20px; }
+.blog-footer { grid-area: footer; background: #e9c46a; padding: 20px; }
+
+
+/* gallery */
+.gallery-container {
+  display: grid;
+  /* auto-fit: Add as many columns as will fit.
+    minmax(150px, 1fr): Cards must be at least 150px wide, but can stretch to fill remaining space (1fr).
+  */
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 15px;
+}
+
+.item {
+  background: #264653;
+  color: white;
+  padding: 60px 20px;
+  text-align: center;
+  border-radius: 8px;
+}
+    </style>
+</head>
+<body>
+    <h2>Assignment 1: Basic Grid Layout</h2>
+    <div class="grid">
+        <div class="item" style="background-color: #FF6B6B;">1</div>
+        <div class="item" style="background-color: #4ECDC4;">2</div>
+        <div class="item" style="background-color: #45B7D1;">3</div>
+        <div class="item" style="background-color: #FFA07A;">4</div>
+        <div class="item" style="background-color: #98D8C8;">5</div>
+        <div class="item" style="background-color: #F7DC6F;">6</div>
+        <div class="item" style="background-color: #BB8FCE;">7</div>
+        <div class="item" style="background-color: #85C1E2;">8</div>
+        <div class="item" style="background-color: #F8B88B;">9</div>
+    </div>
+<br>
+    <h2>Assignment 2: Block Page Layout</h2>
+    <div class="blog-container">
+  <header class="blog-header">Header</header>
+  <aside class="blog-sidebar">Sidebar</aside>
+  <main class="blog-main">Main Content</main>
+  <footer class="blog-footer">Footer</footer>
+</div>
+
+    <h2>Assignment 3: Responsive Gallery</h2>
+    <div class="gallery-container">
+  <div class="item">Image 1</div>
+  <div class="item">Image 2</div>
+  <div class="item">Image 3</div>
+  <div class="item">Image 4</div>
+  <div class="item">Image 5</div>
+</div>
+
+</body>
+</html>

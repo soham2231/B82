@@ -1,0 +1,330 @@
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+body{
+    background-color: #f1fde2;
+}
+
+.headerOne{
+    background-color: #39a439;
+    color: white;
+    text-align: center;
+    font-size: 1.1rem;
+    padding: 5px;
+}
+
+.greenBTN{
+    background-color: #39a439;
+    color: white;
+    border: 0;
+    padding: 5px 7px;
+    font-size: 1rem;
+    border-radius: 3px;
+    text-decoration: none;
+}
+.btnBlack{
+       background-color: black;
+    color: white;
+    border: 0;
+    padding: 5px 7px;
+    font-size: 1rem;
+    border-radius: 3px;
+}
+.mainNavbar{
+    height: 120px;
+}
+.imgNavbar{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.logo{
+    width: 200px;
+    height: 100px;
+}
+.btnContainer{
+    display: inline-block;
+}
+.searchInput{
+        background-color: rgb(208, 208, 208);
+        padding: 15px;
+        border: none;
+        border-radius: 5px;
+        width: 300px;
+    }
+
+.navbarMenus{
+    height: 40px;
+    background-color: rgb(94, 94, 94);
+}
+.menusInNav{
+    list-style-type: none;
+    width: 40%;
+    margin: 2px auto;
+    padding-top: 10px;
+}
+.menuList{
+    display: inline-block;
+    margin-right: 1rem;
+}
+.menuItem{
+    color: white;
+    text-decoration: none;
+    font-size: larger;
+}
+.menuItem:hover{
+    color: #39a439;
+}
+
+.ImagesThree{
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+    padding: 1rem;
+}
+.imgThree{
+    width: 350px;
+    height: 400px;
+}
+
+.youtube{
+   background-color: white;
+    width: 60%;
+    margin: 5px auto;
+    padding-top: 2rem;
+    border-radius: 7px; 
+}
+iframe{
+    width: 100%;
+    height: 350px;
+    margin-top: 2rem;
+}
+.whiteCardBox{
+    background-color: white;
+    box-shadow: 1px 1px 1px 1px gray;
+    width: 80%;
+    margin: 5px auto;
+    padding: 2rem;
+    border-radius: 7px;
+}
+
+.whiteCardBox h2, .youtube h2{
+    text-align: center;
+    font-weight: 800;
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+.whiteCardBox p, .youtube p{
+    color: gray;
+    line-height: 1.7;
+    margin-bottom: 1rem;
+    text-align: center;
+}
+.whiteCardBox div.btnCenter{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.orderOnline{
+    background-color: green;
+    text-align: center;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+
+}
+.orderOnline p{
+    border-bottom: 2px solid white;
+    width: 150px;
+    color: white;
+    font-size: 1.2rem;
+    margin: 1rem auto;
+}
+.onlineStore img{
+    mix-blend-mode: multiply;
+    width: 150px;
+    height: 100px;
+}
+
+#ordr{
+    position: relative;
+    bottom: 40px;
+}
+
+#sw{
+    height: inherit;
+}
+#zom{
+    height: inherit;
+}
+
+
+.seasonal-best-section {
+  background-color: #f1f4de; /* Matches the light background in the image */
+  padding: 40px 20px;
+  font-family: Arial, sans-serif;
+}
+
+.section-title {
+  text-align: center;
+  font-family: 'Times New Roman', serif;
+  color: #2c3e2d;
+  font-size: 28px;
+  margin-bottom: 30px;
+  letter-spacing: 1px;
+}
+
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 20px;
+  max-width: 1200px;
+  margin: 0 auto; /* Centers the grid */
+}
+
+.product-card {
+  background-color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.05); /* Soft shadow */
+}
+
+.card-image-wrapper {
+  width: 100%;
+  height: 250px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.card-image-wrapper img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+}
+
+.card-details {
+  padding: 15px;
+  text-align: center;
+}
+
+.card-details h3 {
+  font-size: 14px;
+  color: #444;
+  margin: 0 0 15px 0;
+}
+
+.card-actions {
+  display: flex;
+  justify-content: center;
+  gap: 5px;
+}
+
+.card-actions button {
+  border: none;
+  padding: 8px 15px;
+  font-size: 11px;
+  font-weight: bold;
+  color: white;
+  cursor: pointer;
+  transition: opacity 0.2s;
+}
+
+.card-actions button:hover {
+  opacity: 0.8;
+}
+
+.btn-buy {
+  background-color: #00b050; /* Green */
+}
+
+.btn-read {
+  background-color: #808080; /* Grey */
+}
+
+
+.simple-grid {
+  display: grid;
+  grid-template-columns: 50% 50%; /* Two equal columns */
+  gap: 10px; /* Small space between pictures */
+  max-width: 1000px;
+  margin: 0 auto; /* Center the grid on the page */
+  padding: 20px; /* Add some padding around the grid */
+}
+
+.image-box {
+  position: relative; /* This allows us to place text inside the box */
+  font-family: serif; 
+  width: 100%;
+}
+
+.image-box img {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+.overlay-text {
+  position: absolute; /* Takes text out of normal flow to float it */
+  top: 30%; /* Pushes text down from the top */
+  right: 15%; /* Pushes text away from the right edge */
+  color: white;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+/* 1. Main background and spacing */
+.ingredient-story {
+  background-color: #f1f4de; /* Light green background */
+  padding: 50px 20px;
+  font-family: Arial, sans-serif;
+}
+
+/* 2. Centers the main heading */
+.section-title {
+  text-align: center;
+  font-family: 'Times New Roman', serif;
+  color: #2c3e2d;
+  font-size: 32px;
+  margin-bottom: 50px;
+}
+
+/* 3. Uses Flexbox to put the 3 items side-by-side */
+.ingredient-container {
+  display: flex;
+  justify-content: center;
+  gap: 40px; /* Space between the three columns */
+  max-width: 1000px; /* Keeps the text from stretching too wide */
+  margin: 0 auto; /* Centers the whole container */
+}
+
+/* 4. Styles each of the 3 individual columns */
+.ingredient-item {
+  flex: 1; /* Makes all three columns take up equal space */
+  text-align: center; /* Centers the icon, title, and text inside the column */
+}
+
+/* 5. Sizes the icon images */
+.ingredient-icon {
+  width: 70px;
+  height: 70px;
+  margin-bottom: 15px;
+}
+
+/* 6. Styles the small sub-headings (1. MILK, etc.) */
+.ingredient-item h3 {
+  font-family: 'Times New Roman', serif;
+  color: #2c3e2d;
+  font-size: 22px;
+  margin-bottom: 15px;
+}
+
+/* 7. Styles the paragraph text to make it grey and easy to read */
+.ingredient-item p {
+  color: #777777;
+  font-size: 14px;
+  line-height: 1.6; /* Adds breathing room between lines of text */
+}
