@@ -1,0 +1,264 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tribute Page</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      crossorigin="anonymous"
+    />
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#">Navbar</a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="#">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Link</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a
+                class="nav-link dropdown-toggle"
+                href="#"
+                role="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
+                Dropdown
+              </a>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="#">Action</a></li>
+                <li><a class="dropdown-item" href="#">Another action</a></li>
+                <li><hr class="dropdown-divider" /></li>
+                <li>
+                  <a class="dropdown-item" href="#">Something else here</a>
+                </li>
+              </ul>
+            </li>
+          </ul>
+          <form class="d-flex" role="search">
+            <input
+              class="form-control me-2"
+              type="search"
+              placeholder="Search"
+              aria-label="Search"
+            />
+            <button class="btn btn-outline-success" type="submit">
+              Search
+            </button>
+          </form>
+        </div>
+      </div>
+    </nav>
+
+    <br />
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark mb-5">
+      <div class="container">
+        <a class="navbar-brand fw-bold" href="#">TechStore</a>
+      </div>
+    </nav>
+
+    <main class="container bg-white p-4 p-md-5 rounded shadow-sm mb-5">
+      <div class="row align-items-center">
+        <div class="col-lg-6 mb-4 mb-lg-0 text-center">
+          <img
+            src="https://images.unsplash.com/photo-1618366712010-f4ae9c647dcb?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+            alt="Sony WH-1000XM5 Headphones"
+            class="img-fluid rounded shadow"
+          />
+        </div>
+
+        <div class="col-lg-6">
+          <div class="mb-2">
+            <span class="badge bg-primary">Best Seller</span>
+            <span class="badge bg-secondary">Wireless ANC</span>
+          </div>
+          <h1 class="display-5 fw-bold mb-3">Sony WH-1000XM5</h1>
+          <h3 class="text-primary mb-3">$398.00</h3>
+
+          <p class="lead text-muted mb-4">
+            The pinnacle of consumer audio technology. Blend industry-leading
+            active noise cancellation with exceptional sound quality for your
+            personal oasis of focus.
+          </p>
+
+          <div class="d-grid gap-2 d-md-flex justify-content-md-start mb-4">
+            <button type="button" class="btn btn-primary btn-lg px-4 me-md-2">
+              <i class="bi bi-cart-plus me-2"></i>Add to Cart
+            </button>
+            <button type="button" class="btn btn-outline-secondary btn-lg px-4">
+              <i class="bi bi-heart"></i>
+            </button>
+          </div>
+
+          <hr />
+
+          <ul class="list-unstyled mt-4">
+            <li class="mb-2">
+              <i class="bi bi-check-circle-fill text-success me-2"></i> Up to 30
+              hours of battery life
+            </li>
+            <li class="mb-2">
+              <i class="bi bi-check-circle-fill text-success me-2"></i>
+              Multipoint Bluetooth connection
+            </li>
+            <li class="mb-2">
+              <i class="bi bi-check-circle-fill text-success me-2"></i>
+              Industry-leading noise cancellation
+            </li>
+          </ul>
+        </div>
+      </div>
+    </main>
+
+    <section class="container mb-5">
+      <div class="text-center mb-5">
+        <h2 class="fw-bold">Key Features</h2>
+        <p class="text-muted">
+          Everything you need for an unmatched audio experience.
+        </p>
+      </div>
+
+      <div class="row g-4">
+        <div class="col-md-4">
+          <div class="card h-100 border-0 shadow-sm p-3">
+            <div class="card-body text-center">
+              <i class="bi bi-mic-mute-fill feature-icon mb-3"></i>
+              <h5 class="card-title fw-bold">Active Noise Cancellation</h5>
+              <p class="card-text text-muted">
+                Two processors controlling eight microphones adapt to your
+                environment in real-time, blocking out everything from engine
+                rumble to office chatter.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-4">
+          <div class="card h-100 border-0 shadow-sm p-3">
+            <div class="card-body text-center">
+              <i class="bi bi-music-note-beamed feature-icon mb-3"></i>
+              <h5 class="card-title fw-bold">High-Res Audio</h5>
+              <p class="card-text text-muted">
+                A specially designed 30mm driver unit delivers crisp sound.
+                Edge-AI upscales compressed digital music files in real-time.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-4">
+          <div class="card h-100 border-0 shadow-sm p-3">
+            <div class="card-body text-center">
+              <i class="bi bi-earbuds feature-icon mb-3"></i>
+              <h5 class="card-title fw-bold">All-Day Comfort</h5>
+              <p class="card-text text-muted">
+                Sleek, minimalist design featuring Soft Fit Leather that fits
+                snugly, taking pressure off your ears while keeping external
+                sounds out.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="container mb-5">
+      <div class="bg-dark text-white p-5 rounded text-center">
+        <h3 class="fw-bold mb-3">Why People Love It</h3>
+        <p class="lead mx-auto" style="max-width: 700px">
+          "Unlike heavy, bulky studio headphones, the WH-1000XM5s are designed
+          for daily life. They are an investment in focus and relaxation, making
+          them a favorite for anyone who wants to escape into their music."
+        </p>
+      </div>
+    </section>
+
+    <footer class="bg-white text-center py-4 border-top">
+      <div class="container text-muted">
+        <small>&copy; 2026 TechStore. All rights reserved.</small>
+      </div>
+    </footer>
+
+    <!-- cards -->
+    <div class="container">
+      <div class="row">
+        <div class="col-12 col-md-3">
+          <div class="card" style="width: 18rem">
+            <img src="..." class="card-img-top" alt="..." />
+            <div class="card-body">
+              <h5 class="card-title">Card title</h5>
+              <p class="card-text">
+                Some quick example text to build on the card title and make up
+                the bulk of the card's content.
+              </p>
+              <a href="#" class="btn btn-primary">Go somewhere</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-12 col-md-3">
+          <div class="card" style="width: 18rem">
+            <img src="..." class="card-img-top" alt="..." />
+            <div class="card-body">
+              <h5 class="card-title">Card title</h5>
+              <p class="card-text">
+                Some quick example text to build on the card title and make up
+                the bulk of the card's content.
+              </p>
+              <a href="#" class="btn btn-primary">Go somewhere</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-12 col-md-3">
+          <div class="card" style="width: 18rem">
+            <img src="..." class="card-img-top" alt="..." />
+            <div class="card-body">
+              <h5 class="card-title">Card title</h5>
+              <p class="card-text">
+                Some quick example text to build on the card title and make up
+                the bulk of the card's content.
+              </p>
+              <a href="#" class="btn btn-primary">Go somewhere</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-12 col-md-3">
+          <div class="card" style="width: 18rem">
+            <img src="..." class="card-img-top" alt="..." />
+            <div class="card-body">
+              <h5 class="card-title">Card title</h5>
+              <p class="card-text">
+                Some quick example text to build on the card title and make up
+                the bulk of the card's content.
+              </p>
+              <a href="#" class="btn btn-primary">Go somewhere</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
