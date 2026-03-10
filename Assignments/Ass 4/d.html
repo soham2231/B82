@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Assignment 4: Dashboard Layout</title>
+
+    <style>
+      .container {
+        display: grid;
+        grid-template-columns: 200px 1fr 200px;
+        grid-template-rows: auto 1fr auto;
+
+        grid-template-areas:
+          "header header header"
+          "nav main aside"
+          "footer footer footer";
+
+        height: 100vh;
+        gap: 10px;
+      }
+
+      header {
+        grid-area: header;
+        background: #333;
+        color: white;
+        padding: 20px;
+      }
+
+      nav {
+        grid-area: nav;
+        background: #ddd;
+        padding: 20px;
+      }
+
+      main {
+        grid-area: main;
+        background: #f4f4f4;
+        padding: 20px;
+      }
+
+      aside {
+        grid-area: aside;
+        background: #ddd;
+        padding: 20px;
+      }
+
+      footer {
+        grid-area: footer;
+        background: #333;
+        color: white;
+        text-align: center;
+        padding: 15px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <header>Header</header>
+
+      <nav>Navigation</nav>
+
+      <main>Main Content</main>
+
+      <aside>Aside</aside>
+
+      <footer>Footer</footer>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment 2: Blog Page Layout</title>
+    <style>
+
+.container{
+display:grid;
+grid-template-columns: 1fr 3fr;
+grid-template-rows: auto 1fr auto;
+grid-template-areas:
+"header header"
+"sidebar main"
+"footer footer";
+
+height:100vh;
+gap:10px;
+}
+
+header{
+grid-area:header;
+background:#333;
+color:white;
+padding:20px;
+}
+
+aside{
+grid-area:sidebar;
+background:#ddd;
+padding:20px;
+}
+
+main{
+grid-area:main;
+background:#f4f4f4;
+padding:20px;
+}
+
+footer{
+grid-area:footer;
+background:#333;
+color:white;
+text-align:center;
+padding:15px;
+}
+
+</style>
+</head>
+<body>
+    <div class="container">
+
+<header>Blog Header</header>
+
+<aside>Sidebar</aside>
+
+<main>Main Content Area</main>
+
+<footer>Footer</footer>
+
+
+</body>
+</html>

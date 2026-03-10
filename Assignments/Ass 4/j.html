@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Img Gallery</title>
+    <style>
+      body {
+        margin: 0;
+        background: #e6e6e6;
+        font-family: Arial;
+        display: flex;
+        justify-content: center;
+        padding: 40px;
+      }
+
+      .gallery {
+        display: grid;
+        grid-template-columns: repeat(3, 200px);
+        grid-auto-rows: 200px;
+        gap: 20px;
+      }
+
+      .item {
+        overflow: hidden;
+        background: white;
+        padding: 5px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+      }
+
+      .item img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        transition: transform 0.4s;
+      }
+
+      .item:hover img {
+        transform: scale(1.2);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="gallery">
+      <div class="item"><img src="Assests/g1.jpg" /></div>
+      <div class="item"><img src="Assests/g2.jpg" /></div>
+      <div class="item"><img src="Assests/g3.jpg" /></div>
+      <div class="item"><img src="Assests/g4.jpg" /></div>
+      <div class="item"><img src="Assests/g5.jpg" /></div>
+      <div class="item"><img src="Assests/g6.jpg" /></div>
+      <div class="item"><img src="Assests/g7.jpg" /></div>
+      <div class="item"><img src="Assests/g8.jpg" /></div>
+      <div class="item"><img src="Assests/g9.jpg" /></div>
+    </div>
+  </body>
+</html>

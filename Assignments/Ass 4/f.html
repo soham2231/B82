@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Assignment II</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        background: #f4f4f4;
+        padding: 40px;
+      }
+
+      .gallery {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-auto-rows: 200px;
+        gap: 20px;
+      }
+
+      .gallery img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        border-radius: 5px;
+      }
+
+      /* Different grid spans */
+
+      .img1 {
+        grid-column: span 1;
+      }
+
+      .img2 {
+        grid-column: span 1;
+      }
+
+      .img3 {
+        grid-column: span 2;
+        grid-row: span 2;
+      }
+
+      .img4 {
+        grid-column: span 2;
+      }
+
+      .img5 {
+        grid-column: span 2;
+      }
+
+      .img6 {
+        grid-column: span 2;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Assignment II</h1>
+
+    <div class="gallery">
+      <img src="Assests/grape.jfif" class="img1" />
+      <img src="Assests/straw.avif" class="img2" />
+
+      <img src="Assests/wat.jpg" class="img3" />
+
+      <img src="Assests/or.jpg" class="img4" />
+
+      <img src="Assests/pap.jpg" class="img5" />
+
+      <img src="Assests/pine.jpg" class="img6" />
+    </div>
+  </body>
+</html>

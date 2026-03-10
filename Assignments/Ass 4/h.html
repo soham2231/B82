@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Circular Grid</title>
+    <style>
+      body {
+        margin: 0;
+        background: #caa300;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+      }
+
+      .container {
+        display: grid;
+        grid-template-columns: repeat(3, 220px);
+        grid-template-rows: repeat(3, 220px);
+        gap: 25px;
+      }
+
+      /* animal images */
+
+      .circle {
+        width: 220px;
+        height: 220px;
+        border-radius: 50%;
+        object-fit: cover;
+        border: 8px solid #caa300;
+      }
+
+      /* environment images */
+
+      .env {
+        width: 220px;
+        height: 220px;
+        object-fit: cover;
+
+        clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <img src="Assests/wolf.jpg" class="circle wolf" />
+      <img src="Assests/sun.jpg" class="env env1" />
+
+      <img src="Assests/tig.jpg" class="circle tiger" />
+      <img src="Assests/ice,jpg.jfif" class="env env2" />
+
+      <img src="Assests/lio.jpg" class="circle lion" />
+      <img src="Assests/mou.jpg" class="env env3" />
+
+      <img src="Assests/husk.jpg" class="circle husky" />
+      <img src="Assests/sea.jpg" class="env env4" />
+
+      <img src="Assests/bear.jpg" class="circle bear" />
+    </div>
+  </body>
+</html>

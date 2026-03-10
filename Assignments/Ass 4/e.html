@@ -1,0 +1,126 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Assignment 5: Card Layout with Implicit Grid</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        background: #f4f4f4;
+        padding: 40px;
+      }
+
+      /* Grid Container */
+
+      .container {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+        gap: 20px;
+      }
+
+      /* Card Design */
+
+      .card {
+        background: white;
+        border-radius: 10px;
+        overflow: hidden;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        transition: 0.3s;
+      }
+
+      .card:hover {
+        transform: translateY(-5px);
+      }
+
+      .card img {
+        width: 100%;
+        height: 180px;
+        object-fit: cover;
+      }
+
+      .card-content {
+        padding: 15px;
+      }
+
+      .card-content h3 {
+        margin-bottom: 10px;
+      }
+
+      .card-content p {
+        color: #555;
+      }
+    </style>
+  </head>
+  <body>
+    <h2>Card Layout</h2>
+
+    <div class="container">
+      <div class="card">
+        <img src="Assests/bmw3.webp" />
+        <div class="card-content">
+          <h3>BMW 3 Series</h3>
+          <p>
+            The BMW 3 Series is a luxury sports sedan known for its dynamic
+            performance, advanced technology, and premium comfort.
+          </p>
+        </div>
+      </div>
+
+      <div class="card">
+        <img src="Assests/bmwx5.avif" />
+        <div class="card-content">
+          <h3>BMW 5 Series</h3>
+          <p>
+            The BMW 5 Series combines elegant design with powerful performance
+            and intelligent driving features.
+          </p>
+        </div>
+      </div>
+
+      <div class="card">
+        <img src="Assests/bmw7.avif" />
+        <div class="card-content">
+          <h3>BMW 7 Series</h3>
+          <p>
+            The BMW 7 Series is the flagship luxury sedan offering ultimate
+            comfort, cutting-edge technology, and a powerful driving experience.
+          </p>
+        </div>
+      </div>
+
+      <div class="card">
+        <img src="Assests/bmwx3.avif" />
+        <div class="card-content">
+          <h3>BMW X3</h3>
+          <p>
+            The BMW X3 is a luxury compact SUV delivering sporty performance,
+            spacious interiors, and modern safety features.
+          </p>
+        </div>
+      </div>
+
+      <div class="card">
+        <img src="Assests/bmwX5.avif" />
+        <div class="card-content">
+          <h3>BMW X5</h3>
+          <p>
+            The BMW X5 is a premium midsize SUV known for its powerful engine
+            options, luxury interiors, and advanced driving technologies.
+          </p>
+        </div>
+      </div>
+
+      <div class="card">
+        <img src="Assests/bmwM4.avif" />
+        <div class="card-content">
+          <h3>BMW M4</h3>
+          <p>
+            The BMW M4 is a high-performance sports coupe designed for thrilling
+            speed, aggressive styling, and track-level performance.
+          </p>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
