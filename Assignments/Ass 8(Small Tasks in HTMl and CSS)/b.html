@@ -1,0 +1,149 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>simple Pricing Table</title>
+  </head>
+  <body>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        background: #f9fbff;
+      }
+      .pricing-section {
+        max-width: 900px;
+        margin: 40px auto;
+        padding: 0 12px;
+      }
+      .pricing-header {
+        text-align: center;
+        margin-bottom: 24px;
+      }
+      .pricing-header h1,
+      .pricing-header p {
+        margin: 0;
+      }
+      .plans {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 12px;
+      }
+      .plan {
+        border: 1px solid #bbb;
+        border-radius: 8px;
+        padding: 16px;
+        background: #fff;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+      }
+      .plan.featured {
+        border-color: #2a64d6;
+        box-shadow: 0 8px 25px rgba(42, 100, 214, 0.22);
+        transform: translateY(-2px);
+      }
+      .plan.featured .plan-price,
+      .plan.featured .plan-title {
+        color: #2a64d6;
+      }
+      .plan-title {
+        font-size: 1.1rem;
+        margin-bottom: 8px;
+        text-align: center;
+      }
+      .plan-price {
+        font-size: 2rem;
+        text-align: center;
+        margin: 0 0 8px;
+      }
+      .plan-billing {
+        text-align: center;
+        margin-bottom: 12px;
+        color: #555;
+      }
+      .features {
+        list-style: none;
+        padding: 0;
+        margin: 0 0 16px;
+      }
+      .features li {
+        margin: 6px 0;
+        display: flex;
+        align-items: center;
+      }
+      .features li::before {
+        content: "\2713";
+        margin-right: 8px;
+        color: #2a64d6;
+      }
+      .btn {
+        border: 1px solid #2a64d6;
+        background: #2a64d6;
+        color: #fff;
+        padding: 9px 12px;
+        border-radius: 5px;
+        cursor: pointer;
+        text-transform: uppercase;
+        font-weight: 600;
+      }
+      .btn.secondary {
+        background: #fff;
+        color: #2a64d6;
+      }
+      .plan.basic .btn {
+        border-color: #2a64d6;
+      }
+      .plan.featured .btn {
+        background: #2a64d6;
+      }
+      .plan.premium .btn {
+        background: #2a64d6;
+      }
+    </style>
+
+    <section class="pricing-section">
+      <div class="pricing-header">
+        <h1>Pricing Plans</h1>
+      </div>
+      <div class="plans">
+        <article class="plan basic">
+          <h2 class="plan-title">Basic</h2>
+          <p class="plan-price">Rs.199/mo</p>
+          <p class="plan-billing">Monthly Billing</p>
+          <ul class="features">
+            <li>5 projects</li>
+            <li>10 GB storage</li>
+            <li>Email support</li>
+          </ul>
+          <button class="btn secondary">Choose Basic</button>
+        </article>
+
+        <article class="plan featured">
+          <h2 class="plan-title">Standard</h2>
+          <p class="plan-price">Rs.299/mo</p>
+          <p class="plan-billing">Monthly Billing</p>
+          <ul class="features">
+            <li>20 projects</li>
+            <li>50 GB storage</li>
+            <li>Priority support</li>
+          </ul>
+          <button class="btn">Select Standard</button>
+        </article>
+
+        <article class="plan premium">
+          <h2 class="plan-title">Premium</h2>
+          <p class="plan-price">Rs.399/mo</p>
+          <p class="plan-billing">Monthly Billing</p>
+          <ul class="features">
+            <li>Unlimited projects</li>
+            <li>200 GB storage</li>
+            <li>Phone + chat support</li>
+          </ul>
+          <button class="btn">Go Premium</button>
+        </article>
+      </div>
+    </section>
+  </body>
+</html>

@@ -1,0 +1,63 @@
+/* navbar */
+
+.hero-section{
+    height:100vh;
+
+    background-image:url("assests/hero.png"); /* adjust path */
+
+    background-size:cover;
+    background-position:center;
+    background-repeat:no-repeat;
+
+    color:white;
+}
+
+/* navbar menu */
+.navbar .nav-link,
+.navbar .navbar-brand{
+    color:white !important;
+}
+.navbar .nav-link,
+.navbar .navbar-brand:hover{
+    color:red;
+}
+.navbar .nav-link{
+    color:white ;
+    transition:0.3s;
+}
+#slogon{
+    position: relative;
+    top: 72px;
+    left: 183px;
+    width: 190px;
+    height: 27px;
+    font-weight: 400;
+    size: 30px;
+    letter-spacing: 3px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+
+/* Navbar text */
+.hero-section-text{
+    display:flex;
+    align-items:center;
+    height:80vh;
+}
+.hero-section-text h1{
+    font-size:90px;
+    font-weight:800;
+    line-height:100px;
+}
+.hero-section-text span{
+    color:#ff3b3b;
+}
+.navbar .nav-link:hover{
+    color:#ff3b3b !important;
+}
+
+/* hero logo */
+.hero-logo{
+    height: 200px;
+    width: 250px;
+}
