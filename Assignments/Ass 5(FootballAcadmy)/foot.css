@@ -1,0 +1,383 @@
+/* navbar */
+
+.hero-section{
+    height:100vh;
+
+    background-image:url("assests/hero.png"); /* adjust path */
+
+    background-size:cover;
+    background-position:center;
+    background-repeat:no-repeat;
+
+    color:white;
+}
+
+/* navbar menu */
+.navbar .nav-link,
+.navbar .navbar-brand{
+    color:white !important;
+    margin-top: 30px;
+    font-size: 20px;
+}
+.navbar .nav-link,
+.navbar .navbar-brand:hover{
+    color:red;
+}
+.navbar .nav-link{
+    color:white ;
+    transition:0.3s;
+}
+
+ 
+
+
+#slogon{
+    position: relative;
+    /* top: 32px; */
+    left: 183px;
+    width: 190px;
+    height: 27px;
+    font-weight: 400;
+    size: 30px;
+    letter-spacing: 3px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+
+/* Navbar text */
+.hero-section-text{
+    display:flex;
+    align-items:center;
+    height:80vh;
+}
+.hero-section-text h1{
+    font-size:90px;
+    font-weight:800;
+    line-height:100px;
+}
+.hero-section-text span{
+    color:#ff3b3b;
+}
+.navbar .nav-link:hover{
+    color:#ff3b3b !important;
+}
+
+/* hero logo */
+.hero-section{
+    position: relative;
+}
+.hero-logo{
+    height: 200px;
+    width: auto;
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    z-index: 999;
+}
+
+/* Second sec */
+
+.about-section{
+    background:#f5f5f5;
+}
+
+.about-img{
+    border-radius:4px;
+}
+
+.title-box{
+    display:flex;
+    align-items:flex-start;
+    gap:15px;
+    margin-bottom:20px;
+}
+
+.title-line{
+    width:6px;
+    height:60px;
+    background:#ff3b3b;
+}
+
+.title-box h2{
+    font-size:36px;
+    font-weight:800;
+}
+
+.about-section p{
+    color:#777;
+    line-height:1.7;
+}
+
+/* Register sec */
+.reg-section{
+    background:#000;
+    padding:120px 0;
+}
+
+.reg-title{
+    color:white;
+    font-size:48px;
+    font-weight:800;
+    line-height:1.3;
+    max-width:900px;
+    margin:auto;
+}
+
+.reg-title span{
+    color:#ff3b3b;
+}
+
+.reg-btn{
+    display:inline-block;
+    margin-top:40px;
+    color:#bbb;
+    text-decoration:none;
+    font-weight:600;
+    letter-spacing:1px;
+    position:relative;
+}
+
+.reg-btn::after{
+    content:"";
+    position:absolute;
+    width:100%;
+    height:2px;
+    background:#bbb;
+    left:0;
+    bottom:-6px;
+}
+
+    /* coach section */
+    .coach-section{
+    background:#f5f5f5;
+}
+
+.coach-img{
+    width:280px;
+    height:280px;
+    object-fit:cover;
+    border-radius:50%;
+}
+
+.coach-title{
+    display:flex;
+    align-items:flex-start;
+    gap:15px;
+    margin-bottom:15px;
+}
+
+.title-bar{
+    width:6px;
+    height:60px;
+    background:#ff3b3b;
+}
+
+.coach-title h3{
+    font-weight:800;
+    margin:0;
+}
+
+.coach-role{
+    color:#ff3b3b;
+    font-weight:600;
+    margin:0;
+}
+
+.coach-text{
+    color:#777;
+    line-height:1.7;
+}
+
+/* player of the week sec */
+.player-week{
+    background:#c3342f;
+    color:white;
+    padding:120px 0 180px 0;
+    position:relative;
+}
+
+/* Diagonal bottom */
+.player-week::after{
+    content:"";
+    position:absolute;
+    bottom:-1px;
+    left:0;
+    width:100%;
+    height:150px;
+    background:#f5f5f5;
+    clip-path:polygon(0 0,100% 100%,0 100%);
+}
+
+.player-small{
+    font-size:20px;
+    font-weight:600;
+    opacity:0.8;
+}
+
+.player-name{
+    font-size:60px;
+    font-weight:800;
+    margin:10px 0 20px;
+}
+
+.player-stats{
+    font-size:22px;
+    font-weight:700;
+}
+
+.player-stats .goals{
+    color:#1da1f2;
+    margin-right:20px;
+}
+
+.player-stats .assists{
+    color:#7a1a1a;
+}
+
+.player-img img{
+    height: 800px;
+    width: 100%;
+    
+}
+
+/* form sec */       
+.join-section{
+    background:#f5f5f5;
+    position:relative;
+}
+
+.join-title{
+    display:flex;
+    align-items:center;
+    gap:15px;
+}
+
+.join-title h2{
+    font-weight:800;
+}
+
+.title-bar{
+    width:6px;
+    height:40px;
+    background:#c3342f;
+}
+
+/* Form Inputs */
+
+.join-form{
+    max-width:350px;
+}
+
+.form-input{
+    width:100%;
+    padding:18px;
+    margin-bottom:20px;
+    border:none;
+    border-radius:40px;
+    background:#e5e5e5;
+    box-shadow:0 5px 8px rgba(0,0,0,0.1);
+}
+
+/* Links */
+
+.form-links{
+    font-weight:600;
+}
+
+.submit-btn{
+    color:#c3342f;
+    text-decoration:none;
+}
+
+.info-btn{
+    color:#c3342f;
+    text-decoration:none;
+}
+
+.divider{
+    margin:0 15px;
+}
+
+/* Right side image */
+
+.join-img{
+    position:relative;
+}
+
+/* Triangle background */
+
+.triangle-bg{
+    position:absolute;
+    left:82.5%;
+    top:53%;
+    transform:translateY(-50%);
+    width:300px;
+    height:550px;
+    background:linear-gradient(135deg,#7fa18a,#cdd5cf);
+    clip-path:polygon(100% 0,100% 100%,0 50%);
+}
+
+/* Ball image */
+
+.ball-img{
+    position:relative;
+    left: 40%;
+    max-width:250px;
+}
+
+/* footer */
+.footer-section{
+    background:#000;
+    color:white;
+    padding:80px 0;
+}
+
+.footer-title{
+    font-weight:800;
+    line-height:1.4;
+}
+
+.footer-title span{
+    color:#c3342f;
+}
+
+.footer-menu{
+    list-style:none;
+    padding:0;
+}
+
+.footer-menu li{
+    margin-bottom:10px;
+}
+
+.footer-menu a{
+    color:#bbb;
+    text-decoration:none;
+    font-weight:500;
+}
+
+.footer-menu a:hover{
+    color:white;
+}
+
+.social-icons a{
+    margin-left:15px;
+}
+
+.social-icons img{
+    width:40px;
+}
+
+.footer-bottom{
+    color:#c3342f;
+    font-size:14px;
+}
+
+.footer-section li{
+    margin-bottom: 5%;
+    margin-left: 20%;
+}
+
+.footer-section i{
+    font-size: 400%;
+}
