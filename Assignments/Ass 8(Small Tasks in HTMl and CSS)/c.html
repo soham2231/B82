@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>3.Navbar</title>
+    <style>
+      /* Reset */
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: Arial, sans-serif;
+      }
+
+      /* Navbar */
+      .navbar {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background-color: #333;
+        padding: 15px 40px;
+      }
+
+      /* Logo */
+      .logo {
+        color: #fff;
+        font-size: 22px;
+        font-weight: bold;
+      }
+
+      /* Menu */
+      .menu {
+        list-style: none;
+        display: flex;
+        gap: 20px;
+      }
+
+      .menu li a {
+        text-decoration: none;
+        color: #fff;
+        padding: 8px 12px;
+        transition: 0.3s;
+      }
+
+      /* Hover Effect */
+      .menu li a:hover {
+        background-color: #555;
+        border-radius: 5px;
+      }
+
+      /* Responsive (Mobile) */
+      @media (max-width: 768px) {
+        .navbar {
+          flex-direction: column;
+          align-items: flex-start;
+        }
+
+        .menu {
+          flex-direction: column;
+          width: 100%;
+          margin-top: 10px;
+        }
+
+        .menu li {
+          width: 100%;
+        }
+
+        .menu li a {
+          display: block;
+          width: 100%;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <nav class="navbar">
+      <div class="logo">MyLogo</div>
+
+      <ul class="menu">
+        <li><a href="#">Home</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Services</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+    </nav>
+  </body>
+</html>

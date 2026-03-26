@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>8.Product Card</title>
+    <style>
+      /* Reset */
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: Arial, sans-serif;
+      }
+
+      body {
+        background: #f4f4f4;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+      }
+
+      /* Container */
+      .container {
+        display: flex;
+        gap: 20px;
+      }
+
+      /* Card */
+      .card {
+        background: #fff;
+        padding: 20px;
+        width: 250px;
+        text-align: center;
+        border-radius: 10px;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        transition: 0.3s;
+      }
+
+      /* Hover effect */
+      .card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+      }
+
+      /* Image */
+      .card img {
+        width: 100%;
+        border-radius: 10px;
+        margin-bottom: 15px;
+      }
+
+      /* Title */
+      .card h3 {
+        margin-bottom: 10px;
+      }
+
+      /* Price */
+      .price {
+        color: #4facfe;
+        font-size: 18px;
+        margin-bottom: 15px;
+      }
+
+      /* Button */
+      .card button {
+        padding: 10px 20px;
+        border: none;
+        background: #4facfe;
+        color: #fff;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: 0.3s;
+      }
+
+      /* Button hover */
+      .card button:hover {
+        background: #007bff;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="card">
+        <img
+          src="https://encrypted-tbn0.gstatic.com/shopping?q=tbn:ANd9GcT6HOX5tpM1qjjRtjOoBsajeLppB2AuHPxvOGK7_JSX7p0aGDa3ZIEin5JVbAoQh5xU1nI-cNyx_JHUYS05rmbplcw0XfjL07lRGCx33xJZS2wUTNJLrzKnb1WioLwdZRKsVdCy7Q&usqp=CAc"
+          alt="product"
+        />
+        <h3>Wireless Headphones</h3>
+        <p class="price">Rs.999</p>
+        <button>Add to Cart</button>
+      </div>
+    </div>
+  </body>
+</html>

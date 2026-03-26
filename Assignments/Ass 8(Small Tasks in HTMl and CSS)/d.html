@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>4.Login Form UI</title>
+    <style>
+      form {
+        width: 300px;
+        margin: 100px auto;
+        padding: 30px;
+        background: white;
+        border-radius: 10px;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+        text-align: center;
+      }
+
+      input {
+        width: 100%;
+        padding: 10px;
+        margin: 10px 0;
+        border-radius: 5px;
+        border: 1px solid gray;
+      }
+
+      button {
+        width: 100%;
+        padding: 10px;
+        margin: 10px 0;
+        border-radius: 5px;
+        border: none;
+        background: rgb(142, 110, 110);
+        color: white;
+        cursor: pointer;
+      }
+      .forgot {
+        text-decoration: none;
+        color: rgb(142, 110, 110);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <form class="login-form">
+        <h2>Login</h2>
+        <label for="mail">Email</label>
+        <input type="email" placeholder="Enter Email" required id="mail" />
+        <br />
+        <label for="pass">Password</label>
+        <input
+          type="password"
+          placeholder="Enter Password"
+          required
+          id="pass"
+        />
+        <br />
+
+        <button type="submit">Login</button>
+        <br />
+
+        <a href="#" class="forgot">Forgot Password?</a>
+      </form>
+    </div>
+  </body>
+</html>
