@@ -1,0 +1,203 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Spotify Clone</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+
+    <link rel="stylesheet" href="cl.css" />
+  </head>
+  <body>
+    <div class="container-fluid p-0">
+      <div class="row g-0">
+        <div class="col-md-2 col-lg-2 d-none d-md-block sidebar p-3">
+          <div class="mb-4 mt-2 px-3">
+            <i class="fa-brands fa-spotify fa-2x"></i>
+            <span class="fs-4 fw-bold ms-2">Spotify</span>
+          </div>
+          <ul class="nav flex-column mb-4">
+            <li class="nav-item">
+              <a class="nav-link text-white" href="#"
+                ><i class="fa-solid fa-house"></i> Home</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#"
+                ><i class="fa-solid fa-magnifying-glass"></i> Search</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#"
+                ><i class="fa-solid fa-book-open"></i> Your Library</a
+              >
+            </li>
+          </ul>
+          <ul class="nav flex-column mt-4">
+            <li class="nav-item">
+              <a class="nav-link" href="#"
+                ><i class="fa-solid fa-square-plus"></i> Create Playlist</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#"
+                ><i class="fa-solid fa-heart text-info"></i> Liked Songs</a
+              >
+            </li>
+          </ul>
+        </div>
+
+        <div class="col-12 col-md-10 col-lg-10 main-content p-4">
+          <div class="d-flex justify-content-between align-items-center mb-4">
+            <div>
+              <button class="btn btn-dark rounded-circle me-2">
+                <i class="fa-solid fa-chevron-left"></i>
+              </button>
+              <button class="btn btn-dark rounded-circle">
+                <i class="fa-solid fa-chevron-right"></i>
+              </button>
+            </div>
+            <div>
+              <button
+                class="btn btn-outline-light rounded-pill fw-bold me-3 px-4 py-1"
+              >
+                Upgrade
+              </button>
+              <button class="btn btn-dark rounded-circle">
+                <i class="fa-regular fa-user"></i>
+              </button>
+            </div>
+          </div>
+
+          <h3 class="fw-bold mb-3">Spotify Playlists</h3>
+          <div class="row row-cols-2 row-cols-md-3 row-cols-lg-5 g-4 mb-5">
+            <div class="col">
+              <div class="spotify-card h-100">
+                <img
+                  src="ass/lofi.jpg"
+                  class="card-img-top w-100"
+                  alt="Album Cover"
+                />
+                <div class="card-title">Lofi Beats</div>
+                <div class="card-text">
+                  Chill beats, lofi vibes, new tracks...
+                </div>
+              </div>
+            </div>
+
+            <div class="col">
+              <div class="spotify-card h-100">
+                <img
+                  src="ass/rock.jpg"
+                  class="card-img-top w-100"
+                  alt="Album Cover"
+                />
+                <div class="card-title">Rock Classics</div>
+                <div class="card-text">
+                  Rock legends & epic songs that built...
+                </div>
+              </div>
+            </div>
+
+            <div class="col">
+              <div class="spotify-card h-100">
+                <img
+                  src="ass/hit.webp"
+                  class="card-img-top w-100 h-50"
+                  alt="Album Cover"
+                />
+                <div class="card-title">Today's Top Hits</div>
+                <div class="card-text">
+                  Dua Lipa is on top of the Hottest 50!
+                </div>
+              </div>
+            </div>
+
+            <div class="col">
+              <div class="spotify-card h-100">
+                <img
+                  src="ass/focus.jfif"
+                  class="card-img-top w-100"
+                  alt="Album Cover"
+                />
+                <div class="card-title">Deep Focus</div>
+                <div class="card-text">
+                  Keep calm and focus with ambient and...
+                </div>
+              </div>
+            </div>
+
+            <div class="col">
+              <div class="spotify-card h-100">
+                <img
+                  src="ass/beast.jfif"
+                  class="card-img-top w-100"
+                  alt="Album Cover"
+                />
+                <div class="card-title">Beast Mode</div>
+                <div class="card-text">
+                  Get your beast mode on with these heavy...
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div
+      class="playbar fixed-bottom d-flex justify-content-between align-items-center px-4"
+    >
+      <div class="d-flex align-items-center" style="width: 30%">
+        <img src="ass/queen.jfif" alt="Song Cover" class="rounded me-3" />
+        <div>
+          <div class="fw-bold" style="font-size: 0.9rem">Bohemian Rhapsody</div>
+          <div class="text-secondary" style="font-size: 0.75rem">Queen</div>
+        </div>
+        <i class="fa-regular fa-heart ms-4 text-secondary"></i>
+      </div>
+
+      <div class="d-flex flex-column align-items-center" style="width: 40%">
+        <div class="play-controls mb-2 d-flex align-items-center">
+          <i class="fa-solid fa-shuffle"></i>
+          <i class="fa-solid fa-backward-step"></i>
+          <i class="fa-solid fa-circle-play mx-3"></i>
+          <i class="fa-solid fa-forward-step"></i>
+          <i class="fa-solid fa-repeat"></i>
+        </div>
+        <div
+          class="d-flex align-items-center w-100 text-secondary"
+          style="font-size: 0.75rem"
+        >
+          <span>1:24</span>
+          <div class="progress-bar-custom mx-2">
+            <div class="progress-bar-fill"></div>
+          </div>
+          <span>5:55</span>
+        </div>
+      </div>
+
+      <div
+        class="d-flex align-items-center justify-content-end text-secondary"
+        style="width: 30%"
+      >
+        <i class="fa-solid fa-microphone ms-3"></i>
+        <i class="fa-solid fa-list ms-3"></i>
+        <i class="fa-solid fa-computer ms-3"></i>
+        <i class="fa-solid fa-volume-high ms-3"></i>
+        <div class="progress-bar-custom" style="width: 80px; margin-left: 10px">
+          <div class="progress-bar-fill" style="width: 70%"></div>
+        </div>
+      </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>

@@ -25,19 +25,26 @@ function clearT(){
 }
 
 function updateTask(i){
-    let newTask=prompt("Update your Task",tasks[i])
-    tasks[i]=newTask
+// WANT TO change the text of update btn after updating the task to "Updated"
+    let updatedTask= prompt("Enter the updated task")
+    if(updatedTask===""){
+        alert("Enter a Task")
+    }
+    else{
+        tasks[i]=updatedTask
+        console.log(tasks)
+    }
     displayT()
-    up.innerHTML = "Updated"
-       
 
-}
+
+
+}   
 
 function displayT(){
         document.getElementById("taskUl").innerHTML = tasks.map((task,i)=>`
         <li>
         ${task}
-         <button id="up" class="btn btn-success" onclick="updateTask(${i})">Update</button>
+         <button id="upd" class="btn btn-success" onclick="updateTask(${i})">Update</button>
          <button  class="btn btn-danger" onclick="deleteTask(${i})">Delete</button>
          </li>
 
@@ -46,53 +53,3 @@ function displayT(){
 
 displayT()
 
-
-
-// function addTask() {
-//   let input = document.getElementById("taskInput");
-//   let task = input.value;
-
-//   if (task === "") {
-//     alert("Enter a task");
-//     return;
-//   }
-
-//   let li = document.createElement("li");
-//   li.innerText = task;
-
-//   // DELETE BUTTON
-//   let delBtn = document.createElement("button");
-//   delBtn.innerText = "Delete";
-
-//   delBtn.onclick = function () {
-//     li.remove();
-//   };
-
-//   // UPDATE BUTTON 🔥
-//   let updateBtn = document.createElement("button");
-//   updateBtn.innerText = "Update";
-
-//   updateBtn.onclick = function () {
-//     let newTask = prompt("Update your task:", li.firstChild.textContent);
-
-//     if (newTask !== null && newTask !== "") {
-//       li.firstChild.textContent = newTask + " (Updated)";
-      
-//       updateBtn.innerText = "Updated ✅";
-//       updateBtn.style.backgroundColor = "green";
-//       updateBtn.style.color = "white";
-//     }
-//   };
-
-//   li.appendChild(delBtn);
-//   li.appendChild(updateBtn);
-
-//   document.getElementById("taskList").appendChild(li);
-
-//   input.value = "";
-// }
-
-// // CLEAR ALL
-// function clearAll() {
-//   document.getElementById("taskList").innerHTML = "";
-// }
