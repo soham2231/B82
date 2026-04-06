@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Zomato Home Page</title>
+    <link rel="stylesheet" href="style.css" />
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
       rel="stylesheet"
@@ -19,38 +20,240 @@
     />
   </head>
   <body>
-    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg" style="background-color: whitesmoke">
       <div class="container-fluid">
-        <a class="navbar-brand" href="#">Zomato</a>
+        <a class="navbar-brand fw-bold text-danger" href="#">Zomato</a>
         <button
           class="navbar-toggler"
           type="button"
           data-bs-toggle="collapse"
-          data-bs-target="#navbarNav"
-          aria-controls="navbarNav"
+          data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
           aria-expanded="false"
           aria-label="Toggle navigation"
         >
           <span class="navbar-toggler-icon"></span>
         </button>
-        <div class="collapse navbar-collapse" id="navbarNav">
-          <ul class="navbar-nav">
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
             <li class="nav-item">
               <a class="nav-link active" aria-current="page" href="#">Home</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">Add Dish </a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#"
-                ><i class="fa-solid fa-cart-shopping"></i>
-              </a>
+              <button
+                class="nav-link"
+                data-bs-toggle="modal"
+                data-bs-target="#forNewDishModal"
+              >
+                Add New Dish
+              </button>
             </li>
           </ul>
+          <!-- Cart btn -->
+          <button type="button" class="btn btn-dark position-relative">
+            <a href="./cart.html" class="nav-link"
+              ><i class="fa-solid fa-cart-shopping"></i
+            ></a>
+            <span
+              id="cartLength"
+              class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-secondary text-dark"
+            >
+              0
+              <!-- <span class="visually-hidden">unread messages</span> -->
+            </span>
+          </button>
+          <!-- ................................................................................................................ -->
+          <!-- <a href="./cart.html" class="nav-link">
+            <i class="fa-solid fa-cart-shopping"></i>
+            <sup id="cartLength"></sup>
+          </a> -->
         </div>
       </div>
     </nav>
 
+    <!-- Hero Section With corousel -->
+    <div class="container-fluid hero-coro">
+      <div id="carouselExampleIndicators" class="carousel slide">
+        <div class="carousel-indicators">
+          <button
+            type="button"
+            data-bs-target="#carouselExampleIndicators"
+            data-bs-slide-to="0"
+            class="active"
+            aria-current="true"
+            aria-label="Slide 1"
+          ></button>
+          <button
+            type="button"
+            data-bs-target="#carouselExampleIndicators"
+            data-bs-slide-to="1"
+            aria-label="Slide 2"
+          ></button>
+          <button
+            type="button"
+            data-bs-target="#carouselExampleIndicators"
+            data-bs-slide-to="2"
+            aria-label="Slide 3"
+          ></button>
+        </div>
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img src="ass/hit.webp" class="d-block" alt="..." />
+          </div>
+          <div class="carousel-item">
+            <img src="ass/hit.webp" class="d-block" alt="..." />
+          </div>
+          <div class="carousel-item">
+            <img src="ass/hit.webp" class="d-block" alt="..." />
+          </div>
+        </div>
+        <button
+          class="carousel-control-prev"
+          type="button"
+          data-bs-target="#carouselExampleIndicators"
+          data-bs-slide="prev"
+        >
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button
+          class="carousel-control-next"
+          type="button"
+          data-bs-target="#carouselExampleIndicators"
+          data-bs-slide="next"
+        >
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+    </div>
+
+    <!-- Dishes -->
+    <div class="container mt-3 dish-card">
+      <div class="row" id="showDishes"></div>
+    </div>
+
+    <!-- Modal for new dish -->
+    <div
+      class="modal fade"
+      id="forNewDishModal"
+      tabindex="-1"
+      aria-labelledby="exampleModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h1 class="modal-title fs-5" id="exampleModalLabel">
+              Add new Dish ...
+            </h1>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body">
+            <div>
+              <div class="form-floating mb-3">
+                <input
+                  type="text"
+                  class="form-control"
+                  id="nameInput"
+                  placeholder="add dish name"
+                />
+                <label>Add Dish Name</label>
+              </div>
+              <div class="form-floating mb-3">
+                <input
+                  type="text"
+                  class="form-control"
+                  id="descriptionInput"
+                  placeholder="description"
+                />
+                <label>Description of Dish</label>
+              </div>
+              <div class="form-floating mb-3">
+                <input
+                  type="number"
+                  class="form-control"
+                  id="priceInput"
+                  placeholder="price"
+                />
+                <label>Price of Dish</label>
+              </div>
+              <div class="form-floating mb-3">
+                <input
+                  type="number"
+                  class="form-control"
+                  id="discountInput"
+                  placeholder="Discount"
+                />
+                <label>Discount </label>
+              </div>
+              <div>
+                <div class="form-check form-check-inline">
+                  <input
+                    class="form-check-input"
+                    type="radio"
+                    name="selectCategory"
+                    id="vegInput"
+                    value="veg"
+                  />
+                  <label class="form-check-label" for="vegInput">VEG</label>
+                </div>
+                <div class="form-check form-check-inline">
+                  <input
+                    class="form-check-input"
+                    type="radio"
+                    name="selectCategory"
+                    id="nonvegInput"
+                    value="Non-veg"
+                  />
+                  <label class="form-check-label" for="nonvegInput"
+                    >NON-VEG</label
+                  >
+                </div>
+              </div>
+              <div>
+                <label for="selectRating">Rating</label>
+
+                <select name="selectRating" id="selectRating">
+                  <option value="">Select rating</option>
+
+                  <option value="1">1</option>
+                  <option value="2">2</option>
+                  <option value="3">3</option>
+                  <option value="4">4</option>
+                  <option value="5">5</option>
+                </select>
+              </div>
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button
+              type="button"
+              class="btn btn-secondary"
+              data-bs-dismiss="modal"
+            >
+              Close
+            </button>
+            <button
+              type="button"
+              class="btn btn-primary"
+              onclick="addNewDish()"
+              data-bs-dismiss="modal"
+            >
+              Add New Dish
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"

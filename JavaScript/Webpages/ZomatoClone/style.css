@@ -1,0 +1,17 @@
+/* Navbar */
+.cartbtn{
+    margin-right: 20px;
+}
+
+/* Hero section */
+.carousel-item img{
+    width: 100%;
+    height:500px;
+    object-fit:cover;
+}
+
+
+/* Cards menu */
+.dish-card{
+    margin-top: 59px;
+}
