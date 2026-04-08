@@ -7,6 +7,13 @@
     <title>Otp Validator</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+
+    <style>
+        #gOtp {
+            display: flex;
+            justify-self: center;
+        }
+    </style>
 </head>
 
 <body class="bg-info fontweight-bold">
@@ -16,14 +23,16 @@
             <div class="col p-4">
                 <div class="conatiner bg-light p-3 m-5 rounded-3 text-center">
                     <h1>OTP Validation</h1>
-                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Minus modi. Lorem ipsum dolor sit amet
-                        consectetur adipisicing elit. Quidem saepe esse aliquid, error molestias quaerat aut facere quam
-                        itaque unde expedita quibusdam soluta animi labore quos, odit, qui quisquam sapiente?</p>
+                    <p>Verify your OTP. Please enter the OTP sent to your mobile number</p>
                     <div class="container w-50 d-flex justify-content-between gap-2 mx-auto">
-                        <input type="text" size="1" maxlength="1" class="form-control " id="onedigit">
-                        <input type="text" size="1" maxlength="1" class="form-control " id="twodigit">
-                        <input type="text" size="1" maxlength="1" class="form-control " id="threedigit">
-                        <input type="text" size="1" maxlength="1" class="form-control " id="fourdigit">
+                        <input type="text" size="1" maxlength="1" class="form-control " id="onedigit"
+                            oninput="toNextInput('twodigit')">
+                        <input type="text" size="1" maxlength="1" class="form-control " id="twodigit"
+                            oninput="toNextInput('threedigit')">
+                        <input type="text" size="1" maxlength="1" class="form-control " id="threedigit"
+                            oninput="toNextInput('fourdigit')">
+                        <input type="text" size="1" maxlength="1" class="form-control " id="fourdigit"
+                            oninput="toNextInput('vOtp')">
 
                     </div>
                     <div>
@@ -32,12 +41,17 @@
                 </div>
 
             </div>
-            <div class="col p-5">
-                <h1>OTP Varefication <br> JavaScript</h1>
+            <div class="col p-5 mt-5">
+                <h1 style="font-weight: bold ; font-size: 50px; color: white;">OTP Validation <br> Form</h1> <br>
+                <H2 style="font-weight: bold ; font-size: 50px; color: white;">HTML,CSS & JS</H2>
             </div>
         </div>
 
-        <button class="btn btn-secondary mt-4" id="gOtp">Generate OTP</button>
+    </div>
+
+    <div class="container">
+        <button class="btn btn-success " id="gOtp">Generate OTP</button>
+
     </div>
 
     <script src="otp.js"></script>
