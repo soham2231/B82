@@ -20,9 +20,41 @@ const dishes = [
     Discount: 15,
   },
 ];
-// Function to render dishes on the webpage
-function renderDishes() {
-  document.querySelector("#showDishes").innerHTML = dishes
+
+// Cart array to hold items added to the cart........................................................................................................................................................
+const cart = [];
+
+//functions to save and get data from local storage........................................................................................................................................................
+function savedToLocalDish(forLocalStorage) {
+  localStorage.setItem("dishes", JSON.stringify(forLocalStorage));
+}
+
+function getFromLocalDish() {
+  return JSON.parse(localStorage.getItem("dishes"));
+}
+
+function savedToLocalCart(c) {
+  localStorage.setItem("cart", JSON.stringify(c));
+}
+
+function getCartFromLocal() {
+  return JSON.parse(localStorage.getItem("cart"));
+}
+
+// {name, price, discount,quantity}
+
+nameInput = document.querySelector("#nameInput");
+descriptionInput = document.querySelector("#descriptionInput");
+priceInput = document.querySelector("#priceInput");
+discountInput = document.querySelector("#discountInput");
+categoryVegInput = document.querySelector("#vegInput");
+categoryNonVegInput = document.querySelector("#nonvegInput");
+ratingInput = document.querySelector("#selectRating");
+
+// Function to render dishes on the webpage..........................................................................................................................
+
+function renderDishes(dishes1) {
+  document.querySelector("#showDishes").innerHTML = dishes1
     .map(
       (dish, i) => `
     <div class='col-12 col-md-6 col-lg-3'>
@@ -42,19 +74,7 @@ function renderDishes() {
     .join("");
 }
 
-// Cart array to hold items added to the cart
-const cart = [];
-// {name, price, discount,quantity}
-
-nameInput = document.querySelector("#nameInput");
-descriptionInput = document.querySelector("#descriptionInput");
-priceInput = document.querySelector("#priceInput");
-discountInput = document.querySelector("#discountInput");
-categoryVegInput = document.querySelector("#vegInput");
-categoryNonVegInput = document.querySelector("#nonvegInput");
-ratingInput = document.querySelector("#selectRating");
-
-// Function to add a new dish to the dishes array
+// Function to add a new dish to the dishes array........................................................................................................................................................
 function addNewDish() {
   const newDish = {
     id: Date.now(),
@@ -65,10 +85,18 @@ function addNewDish() {
     Category: categoryVegInput.checked ? "Veg" : "Non-Veg",
     Rating: ratingInput.value,
   };
+  // console.log(newDish);
+  // dishes.push(newDish);
+  // console.log(dishes);
+  // renderDishes(dishes);
   console.log(newDish);
-  dishes.push(newDish);
+  dishesFRomLocal = getFromLocalDish();
+  dishesFRomLocal.push(newDish);
+  savedToLocalDish(dishesFRomLocal);
+  // remove values from input elements
+  // close the modal after succesful add
   console.log(dishes);
-  renderDishes();
+  renderDishes(dishesFRomLocal);
 
   nameInput.value = "";
   descriptionInput.value = "";
@@ -87,32 +115,69 @@ function addNewDish() {
   modal.hide();
 }
 
-//want to save the new dish in local storage. So that when we refresh the page, the new dish is still there. We can do this by saving the dishes array in local storage whenever we add a new dish. And then when we load the page, we can check if there are any dishes in local storage and if so, we can load them into the dishes array.
+// Function to add a dish to the cart.....................................................................................................................................
+// function AddToCart(ID) {
+//   index = cart.findIndex((dInC, i) => dInC.dish_id == ID);
 
-// Function to save dishes to local storage
+//   if (index != -1) {
+//     cart[index].quantity += 1;
+//     console.log("quantity.cart ******", cart);
+//   } else {
+//     const dishForCart = dishes.find((d) => d.id == ID);
 
-// Function to add a dish to the cart
+//     const dishInCart = {
+//       id: Date.now(),
+//       dish_id: dishForCart.id,
+//       name: dishForCart.name,
+//       price: dishForCart.Price,
+//       discount: dishForCart.Discount,
+//       quantity: 1,
+//     };
+//     cart.push(dishInCart);
+//     console.log("cart ******", cart);
+//   }
+//   document.getElementById("cartLength").textContent = cart.length;
+// }
+
 function AddToCart(ID) {
-  index = cart.findIndex((dInC, i) => dInC.dish_id == ID);
-
+  const getCFromLocal = getCartFromLocal();
+  index = getCFromLocal.findIndex((dInC, i) => dInC.dish_id == ID);
+  console.log(index);
   if (index != -1) {
-    cart[index].quantity += 1;
+    getCFromLocal[index].quantity = getCFromLocal[index].quantity + 1;
+    savedToLocalCart(getCFromLocal);
     console.log("quantity.cart ******", cart);
   } else {
-    const dishForCart = dishes.find((d) => d.id == ID);
+    getFromLocalDishes = getFromLocalDish();
+    const dishForCart = getFromLocalDishes.find((d) => d.id == ID);
 
     const dishInCart = {
       id: Date.now(),
       dish_id: dishForCart.id,
       name: dishForCart.name,
-      price: dishForCart.Price,
-      discount: dishForCart.Discount,
+      price: dishForCart.price,
+      discount: dishForCart.discount,
       quantity: 1,
     };
-    cart.push(dishInCart);
-    console.log("cart ******", cart);
+    getCFromLocal.push(dishInCart);
+    savedToLocalCart(getCFromLocal);
+    console.log("cart ******", getCFromLocal);
   }
-  document.getElementById("cartLength").textContent = cart.length;
+  document.getElementById("cartLength").textContent = getCFromLocal.length;
 }
 
-renderDishes();
+document.addEventListener("DOMContentLoaded", () => {
+  alreadySavedDish = getFromLocalDish();
+  if (!alreadySavedDish) {
+    savedToLocalDish(dishes);
+  }
+
+  renderDishes(alreadySavedDish);
+
+  savedCArt = getCartFromLocal();
+
+  if (!savedCArt) {
+    savedToLocalCart([]);
+  }
+  document.getElementById("cartLength").textContent = savedCArt.length;
+});
