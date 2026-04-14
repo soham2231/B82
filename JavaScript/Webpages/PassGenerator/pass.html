@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Password Generator</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+
+    <style>
+        body {
+            background-color: #f8f9fa;
+        }
+
+        #icon {
+            height: 60px;
+            width: 60px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+        <div class="text-center">
+            <h1><img src="ass/images.png" alt=".." id="icon"> Password Generator</h1>
+        </div>
+
+        <h3>Password Length:</h3>
+        <input type="text" class="form-control border-dark" id="lengthInput">
+
+        <!-- check the conditions you want in your password -->
+        <div class="form-check mt-3">
+            <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+            <label class="form-check-label" for="defaultCheck1">
+                Include Number
+            </label>
+        </div>
+        <div class="form-check">
+            <input class="form-check-input" type="checkbox" value="" id="defaultCheck2">
+            <label class="form-check-label" for="defaultCheck2">
+                Include Uppercase
+            </label>
+        </div>
+        <div class="form-check">
+            <input class="form-check-input" type="checkbox" value="" id="defaultCheck3">
+            <label class="form-check-label" for="defaultCheck3">
+                Include Special Characters
+            </label>
+        </div>
+        <div class="form-check">
+            <input class="form-check-input" type="checkbox" value="" id="defaultCheck4">
+            <label class="form-check-label" for="defaultCheck4">
+                Exclude Ambiguous Characters (e.g. l,1,I,O,0)
+            </label>
+        </div>
+
+        <button id="genPass" class="btn btn-success mt-3" onclick="generatePassword()">Generate Password</button>
+
+        <h3 class="mt-3">Generated Password:</h3>
+        <input type="password" class="form-control border-dark" id="passwordOutput">
+
+        <input type="checkbox" class="form-check-input mt-3" id="showPasswordCheck" onclick="showPassword()">
+        <label class="form-check-label mt-2" for="showPasswordCheck">
+            Show Password
+        </label>
+
+        <div class="progress mt-4 mb-3" role="progressbar" aria-label="Success example" aria-valuenow="25"
+            aria-valuemin="0" aria-valuemax="100">
+            <div class="progress-bar text-bg-success" style="width: 100%">100%</div>
+        </div>
+
+        <span>Very Strong</span> <br>
+
+        <button class="btn btn-outline-secondary mt-3">Copy</button>
+
+    </div>
+
+
+    <script src="pass.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
