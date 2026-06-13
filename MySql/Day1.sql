@@ -71,6 +71,34 @@ delete from students where students_id =13;
 SELECT * FROM results
 WHERE students_id = 1;
 
+-- new queries studied
+
+
+select first_name,phone from students where phone like '2%';
+select students_id , marks from results where marks between 60 and 80;
+select * from results where subject in ('OS','dbms');
+select * from results where subject not in ('OS','dbms');
+select count(*) from students;
+select sum(marks) as total_marks from results;
+
+SELECT d.dept_name, COUNT(s.students_id) AS total_students
+FROM departments d
+JOIN students s ON d.dept_id = s.dept_id
+GROUP BY d.dept_name;
+
+SELECT 
+    s.first_name, 
+    s.last_name, 
+    d.dept_name, 
+    r.subject, 
+    r.marks, 
+    r.grade
+FROM students s
+JOIN departments d ON s.dept_id = d.dept_id
+JOIN results r ON s.students_id = r.students_id;
+
+
+
 commit;
 
 
